@@ -1,0 +1,19 @@
+local args = {
+    [1] = 19,
+    [2] = "PlaceMobileOrder",
+    [3] = {
+        [1] = {
+            ["DefaultInfo"] = {
+                ["View"] = {
+                    ["Direction"] = Enum.NormalId.Top,
+                    ["Model"] = game:GetService("ReplicatedStorage").SelectorModels.Pastry.Cheesecake
+                },
+                ["ItemName"] = "Cheesecake"
+            },
+            ["Item"] = "Cheesecake",
+            ["CustomInfo"] = {}
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage").ReplicaRemoteEvents.Replica_ReplicaSignal:FireServer(unpack(args))
